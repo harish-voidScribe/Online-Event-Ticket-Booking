@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event List</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    body {
+      background-image: url('https://wallpapercave.com/wp/wp9285209.jpg');
+      background-size: cover; /* Cover the entire viewport */
+      background-position: center; /* Center the background image */
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Existing styles for headings and container (unchanged) */
+    h1 {
+      color: black; /* Black text */
+      text-align: center; /* Centered */
+      position: absolute; /* Positioned outside the container flow */
+      top: 20px; /* Adjust vertical position from top */
+      left: 50%; /* Centered horizontally */
+      transform: translateX(-50%); /* Offset to center perfectly */
+      font-size: 2em; /* Bigger than Event List heading */
+      margin: 0; /* Remove default margin */
+    }
+
+    h2 {
+      color: #d6e009; /* Yellowish green color (unchanged) */
+      text-align: center;
+      font-size: 1.5em; /* Adjusted size (smaller) */
+      margin-bottom: 20px; /* Add some space after the heading */
+    }
+
+    /* New style for "Online Booking System" heading */
+    .dotgothic16-regular {
+      font-family: "DotGothic16", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    ul {
+      list-style-type: none;
+      text-align: center;
+      padding: 0;
+    }
+
+    li {
+      margin: 20px 0;
+    }
+
+    .button-link {
+      display: inline-block;
+      padding: 10px 20px;
+      justify-content: center;
+      background-color: #4b0082;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .button-link:hover {
+      background-color: #ff4500;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      justify-content: center;
+      /* background-image: url('https://wallpapercave.com/wp/wp6195787.jpg'); */
+      background-size: cover; /* Method 1 */
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency (0.0 - 1.0) */
+      /* Transparent background */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 class="dotgothic16-regular">ONLINE BOOKING SYSTEM</h1>
+
+  <div class="container">
+    <h2>Event List</h2>
+    <ul>
+      <li><a href="{% url 'event_detail' 1 %}" class="button-link">Batman Movie</a></li>
+      <li><a href="{% url 'event_detail' 2 %}" class="button-link">Interstellar Movie</a></li>
+      <li><a href="{% url 'event_detail' 3 %}" class="button-link">Adele Concert</a></li>
+      <li><a href="{% url 'event_detail' 4 %}" class="button-link">Hans Zimmer Night</a></li>
+    </ul>
+  </div>
+</body>
+</html>
